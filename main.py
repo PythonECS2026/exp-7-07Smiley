@@ -4,9 +4,9 @@
 # Coder:
 # Date:
 students = {
-    "251P005": {"name": "Sameer", "grade": "A", "attendance": 68},
-    "251P055": {"name": "Abdulla", "grade": "B+", "attendance": 88},
-    "251P026": {"name": "Katrina", "grade": "A-", "attendance": 55}
+    "251S005": {"name": "Sameer", "grade": "A", "attendance": 68},
+    "251S055": {"name": "Abdulla", "grade": "B+", "attendance": 88},
+    "251S026": {"name": "Katrina", "grade": "A-", "attendance": 55}
 }
 
 # add new student
@@ -43,6 +43,7 @@ print(f"Final Student Records: {students}")
 
 
 # Stop coding here
+
 
 
 
