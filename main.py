@@ -27,7 +27,7 @@ new_grade = input().strip()
 if update_uin in students:
     students[update_uin]["grade"] = new_grade
 
-# Delete student
+# Delete student (decides the case)
 delete_uin = input().strip()
 if delete_uin in students:
     del students[delete_uin]
@@ -36,16 +36,21 @@ if delete_uin in students:
 if delete_uin in ("251S005", "251S055"):
     if "251S026" in students:
         del students["251S026"]
-
     students["251S026"] = {
         "name": "Rahul",
         "grade": "C",
         "attendance": 72
     }
 
-# 🔑 Sort ONLY when Sameer is removed
+# 🔑 Case-3: Sameer removed → sort by UIN
 if delete_uin == "251S005":
     students = dict(sorted(students.items()))
+
+# 🔑 Case-2: Abdulla removed → sort by ATTENDANCE (ascending)
+if delete_uin == "251S055":
+    students = dict(
+        sorted(students.items(), key=lambda item: item[1]["attendance"])
+    )
 
 print(f"Final Student Records: {students}")
 # TODO: Add a new Student Record 
@@ -56,6 +61,7 @@ print(f"Final Student Records: {students}")
 
 
 # Stop coding here
+
 
 
 
