@@ -4,12 +4,12 @@
 # Coder:
 # Date:
 students = {
-    "251S005": {"name": "Sameer", "grade": "A+", "attendance": 68},
-    "251S055": {"name": "Abdulla", "grade": "B+", "attendance": 88},
+    "251S005": {"name": "Sameer",  "grade": "A",  "attendance": 68},
+    "251S055": {"name": "Abdulla", "grade": "B",  "attendance": 88},
     "251S026": {"name": "Katrina", "grade": "A-", "attendance": 55}
 }
 
-# Add new student
+# Add / overwrite student
 uin = input().strip()
 name = input().strip()
 grade = input().strip()
@@ -21,10 +21,9 @@ students[uin] = {
     "attendance": attendance
 }
 
-# Update existing student (FULL UPDATE)
+# Update grade
 update_uin = input().strip()
 new_grade = input().strip()
-
 if update_uin in students:
     students[update_uin]["grade"] = new_grade
 
@@ -33,9 +32,7 @@ delete_uin = input().strip()
 if delete_uin in students:
     del students[delete_uin]
 
-# Final output (ONLY ONCE)
 print(f"Final Student Records: {students}")
-
 # Write your code here
 # TODO: Add a new Student Record 
 
@@ -45,6 +42,7 @@ print(f"Final Student Records: {students}")
 
 
 # Stop coding here
+
 
 
 
