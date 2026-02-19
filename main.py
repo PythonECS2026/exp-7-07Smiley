@@ -9,13 +9,11 @@ students = {
     "251P026": {"name": "Katrina", "grade": "A-", "attendance": 55}
 }
 
-print(f"Current Student Records: {students}")
-
 # add new student
-uin = input("Enter New Student UIN: ")
-name = input("Enter New Student Name: ")
-grade = input("Enter New Student Grade: ")
-attendance = int(input("Enter New Student Attendance: "))
+uin = input()
+name = input()
+grade = input()
+attendance = int(input())
 
 students[uin] = {
     "name": name,
@@ -24,15 +22,13 @@ students[uin] = {
 }
 
 # update grade
-update_uin = input("Enter UIN to Update: ")
-new_grade = input("Enter New Grade of Student: ")
-
+update_uin = input()
+new_grade = input()
 if update_uin in students:
     students[update_uin]["grade"] = new_grade
 
 # delete student
-delete_uin = input("Enter UIN of the Student to Delete: ")
-
+delete_uin = input()
 if delete_uin in students:
     del students[delete_uin]
 
@@ -48,5 +44,6 @@ print(f"Final Student Records: {students}")
 
 # Stop coding here
 print(f"Final Student Records: {students}")
+
 
 
