@@ -9,12 +9,17 @@ students = {
     "251S026": {"name": "Katrina", "grade": "A-", "attendance": 55}
 }
 
-# Add / overwrite student
+# Add / overwrite student using del + add
 uin = input().strip()
 name = input().strip()
 grade = input().strip()
 attendance = int(input().strip())
 
+# if student already exists, delete first
+if uin in students:
+    del students[uin]
+
+# add student
 students[uin] = {
     "name": name,
     "grade": grade,
@@ -42,6 +47,7 @@ print(f"Final Student Records: {students}")
 
 
 # Stop coding here
+
 
 
 
