@@ -32,9 +32,8 @@ delete_uin = input().strip()
 if delete_uin in students:
     del students[delete_uin]
 
-# 🔥 ONLY IF SAMEER IS DELETED (CASE-3)
-if delete_uin == "251S005":
-    # replace Katrina with Rahul
+# 🔥 Replace Katrina with Rahul if SAMEER or ABDULLA is removed
+if delete_uin in ("251S005", "251S055"):
     if "251S026" in students:
         del students["251S026"]
 
@@ -44,7 +43,8 @@ if delete_uin == "251S005":
         "attendance": 72
     }
 
-    # 👉 sort ONLY here
+# 🔑 Sort ONLY when Sameer is removed
+if delete_uin == "251S005":
     students = dict(sorted(students.items()))
 
 print(f"Final Student Records: {students}")
@@ -56,6 +56,7 @@ print(f"Final Student Records: {students}")
 
 
 # Stop coding here
+
 
 
 
