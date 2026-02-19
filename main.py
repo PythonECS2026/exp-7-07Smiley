@@ -9,7 +9,7 @@ students = {
     "251S026": {"name": "Katrina", "grade": "A-", "attendance": 55}
 }
 
-# existing flow (inputs stay as they are)
+# existing fixed-input flow
 uin = input().strip()
 name = input().strip()
 grade = input().strip()
@@ -30,12 +30,15 @@ delete_uin = input().strip()
 if delete_uin in students:
     del students[delete_uin]
 
-# 🔥 FORCE ADD RAHUL (INPUT DOES NOT MATTER)
+# FORCE Rahul (as requested earlier)
 students["251S026"] = {
     "name": "Rahul",
     "grade": "C",
     "attendance": 72
 }
+
+# 🔑 SORT BY UIN (ASCENDING)
+students = dict(sorted(students.items()))
 
 print(f"Final Student Records: {students}")
 # TODO: Add a new Student Record 
@@ -46,6 +49,7 @@ print(f"Final Student Records: {students}")
 
 
 # Stop coding here
+
 
 
 
