@@ -47,5 +47,6 @@ print(f"Final Student Records: {students}")
 
 
 # Stop coding here
-print(f"Final Student Records: {students_records}")
+print(f"Final Student Records: {students}")
+
 
